@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="big.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <title>OD & OAL</title>
+</head>
+<body>
+  <div id="container">
+    <div class="form-wrap">
+      <h1>Cut Things</h1>
+      <p>G-Code for OD and OAL</p>
+      <form>
+        <div class="form-group">
+          <label for="forgheight">Forging Height</label>
+          <input type="number" name="forg-height" id="forg_height" value="4.1">
+        </div>
+        <div class="form-group">
+          <label for="forgdia">Forging Diameter</label>
+          <input type="number" name="forgdia" id="forg_dia" value="4.37">
+        </div>
+        <div class="form-group" id="finish-height">
+          <label for="finheight">Finish Height</label>
+          <input type="number" name="finheight" id="fin_height">
+        </div>
+        <div class="form-group">
+          <label for="findia">Finish Diameter</label>
+          <input type="number" name="findia" id="fin_dia">
+        </div>
+        <input value="Get G" class="btn" onclick="generateG(this.form)">
+      </form>
+    </div>
+    <div class="gcodebox" id="battleBox"></div>
+  </div>
+  <script src="guts2.js"></script>
+</body>
+</html>
